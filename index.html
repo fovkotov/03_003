@@ -23,10 +23,10 @@
         <div class="test">
             <div class="countanir">
                 <div id="second_knight" class="item">
-                    <p>Next</p>
+                    <p>Bee</p>
                 </div>
-                <div class="item">
-                    <p>Past</p>
+                <div id="first_knight" class="item">
+                    <p>Passion</p>
                 </div>
             </div>
         </div>
@@ -55,32 +55,61 @@
      */
       const updateAllMaterials = () =>
       {
-          scene.traverse((child) =>
-          {
-              if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
-              {
-                  child.material.envMap = environmentMap
-                  child.material.envMapIntensity = debugObject.envMapIntensity
-                  child.material.needsUpdate = true
-                  child.castShadow = true
-                  child.receiveShadow = true
-              }
-          })
-      }
+        scene.traverse((child) =>
+        {
+            if(child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial)
+            {
+                child.material.envMap = environmentMap
+                child.material.envMapIntensity = debugObject.envMapIntensity
+                child.material.needsUpdate = true
+                child.castShadow = true
+                child.receiveShadow = true
+            }
+        })
+      } 
+
+      //swich
+  //     let divs = document.querySelectorAll("div");
+  
+  //     divs.forEach(function(div) {
+  //       div.addEventListener("click", function() {
+  //     div.style.backgroundColor = "black";
+  //   });
+  // });
+
+  // $("div").click(function(){
+	// 	$(this).css("background-color","black");
+    
+	// });
+      $(function () {
+      // Let's attach an event.
+      $("#first_knight").click(function () {
+        $("#canvas_countanir2").hide().css("display", "none");
+        $("#canvas_countanir").hide().css("display", "block");
+      });
+      $("#second_knight").click(function () {
+        $("#canvas_countanir").hide().css("display", "none");
+        $("#canvas_countanir2").hide().css("display", "block");
+      });
+    });
 
 
-      
-      //scene
-      //01
-      const scene = new THREE.Scene();
-      //02
-      const scene2 = new THREE.Scene();
+
+     
+
+    //  
+    //scene
+    //
+    //01
+    const scene = new THREE.Scene();
+    //02
+    const scene2 = new THREE.Scene();
 
 
 
-      /**
-     * Environment map
-     */
+    //
+    //environment map
+    //
     //01
      const environmentMap = cubeTextureLoader.load([
           '/textures/environmentMaps/1/px.jpg',
@@ -204,7 +233,7 @@
       traks ["model_02"],
           (gltf2) =>
           {
-              gltf2.scene.scale.set(0.5, 0.5, 0.5)
+              gltf2.scene.scale.set(10, 10, 10)
               scene2.add(gltf2.scene)
               
           }
