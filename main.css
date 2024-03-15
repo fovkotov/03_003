@@ -34,9 +34,6 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-
-    
-
 }
 
 .canvas_countanir2{
@@ -44,6 +41,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    display: none;
 }
 
 
