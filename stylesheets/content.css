@@ -1,0 +1,583 @@
+
+
+canvas { 
+    outline: none; border: none; 
+}
+
+body {
+    overflow: hidden;
+}
+
+
+.test{
+    width: 100vw;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: flex-end;
+    position: absolute;
+    z-index: 4;
+    bottom:  0;
+}
+
+.countanir{
+    max-width: 454px;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    padding: 20px;
+    gap: 8px;
+    z-index: 4;
+
+}
+
+#canvas_countanir{
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#canvas_countanir2{
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#canvas_countanir3 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #canvas_countanir4 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #canvas_countanir5 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #canvas_countanir6 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  #canvas_countanir7 {
+    z-index: 2;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+
+
+.item{
+    background-color: black;
+    padding: 8px 10px;
+    border-radius: 16px;
+    cursor: pointer;
+    z-index: 4;
+
+}
+
+p{
+    font-family: 'FTAktualTrial-Semibold';
+    font-size: 14px;
+    color: aliceblue;
+}
+
+
+
+/* bottom */
+.bottom {
+    width: calc(100% - 20px);
+    max-width: 1920px;
+    grid-column-gap: 10px;
+    background-image: linear-gradient(rgba(255, 0, 0, 0), red 88%);
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 80px 10px 10px;
+    text-decoration: none;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    z-index: 5;
+  }
+  
+  .coompany-info {
+    grid-column-gap: 94px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .vectors-wrapper {
+    width: 25px;
+    height: 25px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .coompany-info_info {
+    width: 169px;
+    height: 70px;
+    border: 0 solid #fff;
+    border-left-width: 1px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 4px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .text {
+    color: #fff;
+    letter-spacing: -.1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 10px;
+    text-decoration: none;
+    font-family: 'FTAktualTrial-Semibold';
+  }
+  
+  .tab-bar {
+    width: 100%;
+    grid-column-gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .tab-bar_arrows {
+    width: 50px;
+    height: 70px;
+    grid-column-gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .vectors-wrapper-2 {
+    width: 14.0837px;
+    height: 15.5183px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .tab-bar_tabs {
+    grid-column-gap: 2px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .tab-bar_item {
+    object-fit: cover;
+    border-radius: 15.122px;
+  }
+  
+  .tab-bar_arrows-2 {
+    width: 50px;
+    height: 70px;
+    grid-column-gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .about_me {
+    width: 168px;
+    height: 70px;
+    border: 0 solid #fff;
+    border-left-width: 1px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-left: 4px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .frame-480 {
+    width: 164px;
+    grid-column-gap: 2px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .vectors-wrapper-3 {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .about_desk {
+    grid-column-gap: 10px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .about-__mobile {
+    grid-column-gap: 10px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .mybutton {
+    width: 100%;
+    height: 53px;
+    grid-column-gap: 10px;
+    background-color: rgba(0, 0, 0, .25);
+    border-radius: 14px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  
+  /* top */
+  .top {
+    width: calc(100% - 20px);
+    max-width: 1920px;
+    grid-column-gap: 10px;
+    background-image: linear-gradient(red, rgba(255, 0, 0, 0));
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    position: fixed;
+    top: 0;
+    z-index: 6;
+  }
+  
+  .show-info {
+    width: 100%;
+    max-width: 288px;
+    grid-row-gap: 49px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .text-2 {
+    color: #fff;
+    letter-spacing: -.42px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 21px;
+    text-decoration: none;
+    font-family: 'FTAktualTrial-Semibold';
+
+  }
+  
+  .acitions {
+    grid-column-gap: 10px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+
+  .goods {
+    width: 100%;
+    grid-column-gap: 2px;
+    grid-row-gap: 10px;
+    justify-content: center;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .goods_item-01 {
+    width: 139px;
+    height: 126px;
+    grid-row-gap: 4px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .goods_img-01 {
+    object-fit: cover;
+    background-color: #d9d9d9;
+    border-radius: 18px;
+  }
+  
+  .goods_item_info {
+    width: 109px;
+    grid-row-gap: 4px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+
+  .info-covr {
+    width: 109px;
+    height: 109px;
+    grid-row-gap: 10px;
+    background-color: #afafaf;
+    border-radius: 18px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 18px;
+    text-decoration: none;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .vase-1 {
+    object-fit: cover;
+  }
+  
+  .claps {
+    width: 50px;
+    height: 50px;
+    grid-row-gap: 10px;
+    background-color: #f5f5f5;
+    border-radius: 13px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 9px;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .fake {
+    width: 350px;
+    color: #fff;
+    letter-spacing: -.42px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 21px;
+    text-decoration: none;
+    font-family: 'FTAktualTrial-Semibold';
+  }
+  
+  .goods_item_claps {
+    grid-row-gap: 4px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: flex;
+  }
+  
+  .show-info-fake {
+    width: 100%;
+    max-width: 288px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    display: flex;
+  }
+  
+  .acitions_mobile {
+    grid-column-gap: 10px;
+    flex: 0 auto;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-decoration: none;
+    display: none;
+  }
+  
+  .goods_img-01-mobile, .goods_img-01-copy {
+    object-fit: cover;
+    background-color: #d9d9d9;
+    border-radius: 18px;
+  }
+  
+  .goods_img-01_mobile, .goods_img-03_mobile, .goods_img-02_mobile, .goods_img-04_mobile {
+    display: none;
+  }
+  
+  .text-2_goods {
+    color: #fff;
+    letter-spacing: -.42px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 21px;
+    text-decoration: none;
+    font-family: 'FTAktualTrial-Semibold';
+  }
+  
+  @media screen and (max-width: 991px) {
+    .bottom {
+      grid-row-gap: 10px;
+      flex-flow: column;
+    }
+  
+    .coompany-info {
+      grid-column-gap: 158px;
+    }
+  
+    .about_me {
+      width: 168px;
+    }
+  
+    .about_desk {
+      display: none;
+    }
+  
+    .about-__mobile {
+      display: flex;
+    }
+  
+    .mybutton {
+      display: none;
+    }
+  
+    .goods {
+      width: auto;
+      flex-flow: column;
+    }
+  
+    .acitions {
+      display: none;
+    }
+  
+    .show-info-fake {
+      max-width: 100%;
+      justify-content:space-between
+    }
+  
+    .acitions_mobile {
+      display: flex;
+    }
+  }
+  
+  @media screen and (max-width: 767px) {
+    .bottom {
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+  
+    .coompany-info {
+      grid-column-gap: 151px;
+    }
+  
+    .vectors-wrapper {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .tab-bar_arrows {
+      display: none;
+    }
+  
+    .tab-bar_tabs {
+      overflow: auto;
+    }
+  
+    .tab-bar_arrows-2 {
+      display: none;
+    }
+  
+    .goods_item-01 {
+      width: 70px;
+      height: auto;
+    }
+  
+    .goods_img-01 {
+      display: none;
+    }
+  
+    .show-info-fake {
+      flex-flow: row;
+      width: 100%;
+
+    }
+
+    .show-info{
+        width: 100%;
+    }
+  
+    .goods_item_info_right, .goods_img-02, .goods_img-03, .goods_img-04 {
+      display: none;
+    }
+  
+    .goods_img-01_mobile, .goods_img-03_mobile, .goods_img-02_mobile, .goods_img-04_mobile {
+      width: 70px;
+      display: block;
+    }
+  
+    .text-2_goods {
+      font-size: 10px;
+      line-height: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .coompany-info {
+      grid-column-gap: 146px;
+    }
+  
+    .vectors-wrapper {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .tab-bar_tabs {
+      overflow: auto;
+    }
+  
+    .mybutton {
+      display: flex;
+    }
+  }
+
+
+
+
