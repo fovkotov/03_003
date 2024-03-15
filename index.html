@@ -22,12 +22,20 @@
     <body>
         <div class="test">
             <div class="countanir">
-                <div id="second_knight" class="item">
-                    <p>Bee</p>
-                </div>
                 <div id="first_knight" class="item">
-                    <p>Passion</p>
-                </div>
+                <p>aliann</p></div>
+                <div id="second_knight" class="item">
+                    <p>Bee</p></div>
+                <div id="third_knight" class="item">
+                  <p>third</p></div>
+                <div id="fourth_knight" class="item">
+                  <p>fourth</p></div>
+                <div id="fivth" class="item">
+                  <p>fivth</p></div>
+                <div id="sexth_knight" class="item">
+                  <p>sixth</p></div>
+                <div id="seventh_knight" class="item">
+                  <p>seventh</p></div>
             </div>
         </div>
     <div class="canvas_countanir">
@@ -47,6 +55,7 @@
       const cubeTextureLoader = new THREE.CubeTextureLoader()
       const gltfLoader = new GLTFLoader()
       const gltfLoader2 = new GLTFLoader()
+      
 
 
 
@@ -73,22 +82,25 @@
       //
       //swich
       //
-      $(function () {
-      // Let's attach an event.
-      $("#first_knight").click(function () {
-        $("#canvas_countanir2").hide().css("display", "none");
-        $("#canvas_countanir").hide().css("display", "block");
-      });
-      $("#second_knight").click(function () {
-        $("#canvas_countanir").hide().css("display", "none");
-        $("#canvas_countanir2").hide().css("display", "block");
-      });
-    });
+      $(function () 
+      {
+        
+        $("#first_knight").click(function () {
+          $("#canvas_countanir2").hide().css("display", "none");
+          $("#canvas_countanir").hide().css("display", "block");
+        });
 
-    
+        $("#second_knight").click(function () {
+          $("#canvas_countanir").hide().css("display", "none");
+          $("#canvas_countanir2").hide().css("display", "block");
+        });
+
+      });
+
+
 
     //  
-    //scene
+    //scenes
     //
     //01
     const scene = new THREE.Scene();
@@ -116,12 +128,12 @@
 
       //02
       const environmentMap2 = cubeTextureLoader.load([
-          '/textures/environmentMaps/1/px.jpg',
-          '/textures/environmentMaps/1/nx.jpg',
-          '/textures/environmentMaps/1/py.jpg',
-          '/textures/environmentMaps/1/ny.jpg',
-          '/textures/environmentMaps/1/pz.jpg',
-          '/textures/environmentMaps/1/nz.jpg'
+          '/textures/environmentMaps/2/px.jpg',
+          '/textures/environmentMaps/2/nx.jpg',
+          '/textures/environmentMaps/2/py.jpg',
+          '/textures/environmentMaps/2/ny.jpg',
+          '/textures/environmentMaps/2/pz.jpg',
+          '/textures/environmentMaps/2/nz.jpg'
       ])
 
       environmentMap2.encoding = THREE.sRGBEncoding
@@ -163,6 +175,7 @@
 
       //
       //tracks
+      //
       //Переменные, отвечающие за пути к моделькам
       var traks = {
         "model_01": "models/scene.gltf",
@@ -170,16 +183,18 @@
       };
 
 
-
+      //
       //camera
+      //
       //01
       const camera = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
       //02
       const camera2 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
 
 
-
+      //
       //renderer
+      //
       //01
       const renderer = new THREE.WebGLRenderer(
           {
@@ -187,8 +202,6 @@
           }
           );
       renderer.setSize( sizes.w , sizes.h );
-
-
       //02
       const renderer2 = new THREE.WebGLRenderer(
           {
@@ -234,18 +247,8 @@
       //
       //lights
       //
-
-      //tries
-      // const directionalLight = new THREE.DirectionalLight('#ffffff', 3)
-      // directionalLight.castShadow = true
-      // directionalLight.shadow.camera.far = 15
-      // directionalLight.shadow.mapSize.set(1024, 1024)
-      // directionalLight.shadow.normalBias = 0.05
-      // directionalLight.position.set(0.25, 3, - 2.25)
-      // scene.add(directionalLight)
-
       //01
-      const ambientLight = new THREE.AmbientLight(0xffffff, 1.2)
+      const ambientLight = new THREE.AmbientLight(0xffffff, 1.3)
       scene.add(ambientLight)
 
       const directionalLight = new THREE.DirectionalLight(0xffffff, 1.3)
@@ -262,8 +265,8 @@
       camera.position.set(10, 0, 10);
 
       //02
-      const ambientLight2 = new THREE.AmbientLight(0xffffff, 1.2)
-      scene.add(ambientLight)
+      const ambientLight2 = new THREE.AmbientLight(0xffffff, 1.3)
+      scene2.add(ambientLight2)
 
       const directionalLight2 = new THREE.DirectionalLight(0xffffff, 1.3)
       directionalLight2.castShadow = true
@@ -278,14 +281,17 @@
 
       camera2.position.set(20, 0, 10);
 
-
+      //  
       // Initialize OrbitControls
+      //
+      //01
       const controls = new OrbitControls(camera, renderer.domElement);
       controls.enableDamping = true; 
       controls.dampingFactor = 0.25;
       controls.screenSpacePanning = false;
       controls.enableZoom = false;
-
+      
+      //02
       const controls2 = new OrbitControls(camera2, renderer2.domElement);
       controls2.enableDamping = true; 
       controls2.dampingFactor = 0.25;

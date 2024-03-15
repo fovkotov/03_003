@@ -1,3 +1,13 @@
+canvas { 
+    outline: none; border: none; 
+}
+
+body {
+    overflow: hidden;
+}
+
+
+
 .test{
     width: 100vw;
     display: flex;
@@ -20,14 +30,20 @@
 }
 
 .canvas_countanir{
-    z-index: 1;
+    z-index: 3;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
     
 
 }
 
 .canvas_countanir2{
     z-index: 2;
-    
+    position: absolute;
+    top: 0px;
+    left: 0px;
 }
 
 
@@ -37,7 +53,7 @@
     background-color: black;
     padding: 8px 10px;
     border-radius: 16px;
-
+    cursor: pointer;
 }
 
 p{
