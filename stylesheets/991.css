@@ -1,0 +1,46 @@
+@media screen and (max-width: 991px) {
+    .bottom {
+      grid-row-gap: 10px;
+      flex-flow: column;
+    }
+  
+    .coompany-info {
+      grid-column-gap: 158px;
+    }
+  
+    .about_me {
+      width: 168px;
+    }
+  
+    .about_desk {
+      display: none;
+    }
+  
+    .about-__mobile {
+      display: flex;
+    }
+  
+    .mybutton {
+      display: none;
+    }
+  
+    .goods {
+      width: auto;
+      flex-flow: column;
+    }
+  
+    .acitions {
+      display: none;
+    }
+  
+    .show-info-fake {
+      max-width: 100%;
+      justify-content:space-between
+    }
+  
+    .acitions_mobile {
+      display: flex;
+    }
+  }
+  
+  
