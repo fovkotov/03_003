@@ -37,6 +37,7 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    display: none;
 }
 
 #canvas_countanir2{
@@ -44,12 +45,14 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    display: none;
 }
 
 #canvas_countanir3 {
     z-index: 2;
     position: absolute;
     top: 0px;
+    display: none;
     left: 0px;
   }
   
@@ -57,6 +60,7 @@ body {
     z-index: 2;
     position: absolute;
     top: 0px;
+    display: none;
     left: 0px;
   }
   
@@ -64,6 +68,7 @@ body {
     z-index: 2;
     position: absolute;
     top: 0px;
+    display: none;
     left: 0px;
   }
   
@@ -71,6 +76,7 @@ body {
     z-index: 2;
     position: absolute;
     top: 0px;
+    display: none;
     left: 0px;
   }
   
@@ -79,6 +85,8 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    display: none;
+
   }
 
 

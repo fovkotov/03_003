@@ -1,0 +1,62 @@
+
+  
+  @media screen and (max-width: 579px) {
+    .coompany-info {
+      grid-column-gap: 146px;
+    }
+  
+    .vectors-wrapper {
+      width: 32px;
+      height: 32px;
+    }
+  
+    .tab-bar_tabs {
+      overflow: auto;
+    }
+  
+    .mybutton {
+      display: flex;
+    }
+
+    .goods_img-01,.goods_img-02,.goods_img-03,.goods_img-04{
+      display: none;
+    }
+
+    .goods_img-01_mobile,.goods_img-02_mobile,.goods_img-03_mobile,.goods_img-04_mobile{
+      display: block;
+    }
+
+    .goods_item_info_right{
+      display: none;
+    }
+
+    .goods{
+      width: 70px;
+    }
+
+    .text-2_goods{
+      font-size: 10px;
+      line-height: 10px;
+    }
+
+    .goods_item_info{
+      width: 70px;
+    }
+
+    .goods_item-01{
+      width: 70px;
+      height: auto;
+    }
+    
+    .coompany-info {
+      grid-column-gap: 151px;
+    }
+
+    .tab-bar_arrows {
+      display: none;
+    }
+
+    .tab-bar_arrows-2 {
+      display: none;
+    }
+  }

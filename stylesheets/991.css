@@ -5,7 +5,7 @@
     }
   
     .coompany-info {
-      grid-column-gap: 158px;
+      grid-column-gap: 157px;
     }
   
     .about_me {
@@ -41,6 +41,8 @@
     .acitions_mobile {
       display: flex;
     }
+
+
   }
   
   
