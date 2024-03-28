@@ -6,8 +6,6 @@
     <script src="javascript/jquery-3.7.1.js"></script>
     <title>я почти сдался_002</title>
     <link rel="stylesheet" href="stylesheets/style.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css">
     <script type="importmap">
       {
         "imports": {
@@ -19,6 +17,10 @@
   </head>
   <body>
     <body>
+      <div class="progress-bar-container">
+        <label for="progress-bar">Loading...</label>
+        <progress id="progress-bar" value="0" max="100"></progress>
+      </div>
       <div class="about">
         <div class="me_animated">
           <div id="content8"></div>
@@ -301,17 +303,41 @@
       let water, sun, mesh;
       sun = new THREE.Vector3();
 
+      //
+      //loader
+      //
+      const loadingManager = new THREE.LoadingManager();
+
+      // loadingManager.onStart = function(url, item, total) {
+      //     console.log(`Started loading: ${url}`);
+      // }
+
+      const progressBar = document.getElementById('progress-bar');
+
+      loadingManager.onProgress = function(url, loaded, total) {
+          progressBar.value = (loaded / total) * 100;
+      }
+
+      const progressBarContainer = document.querySelector('.progress-bar-container');
+
+      loadingManager.onLoad = function() {
+          progressBarContainer.style.display = 'none';
+      }
+
+      // loadingManager.onError = function(url) {
+      //     console.error(`Got a problem loading: ${url}`);
+      // }
 
       //loaders
       const cubeTextureLoader = new THREE.CubeTextureLoader()
-      const gltfLoader = new GLTFLoader()
-      const gltfLoader2 = new GLTFLoader()
-      const gltfLoader3 = new GLTFLoader()
-      const gltfLoader4 = new GLTFLoader()
-      const gltfLoader5 = new GLTFLoader()
-      const gltfLoader6 = new GLTFLoader()
-      const gltfLoader7 = new GLTFLoader()
-      const gltfLoader8 = new GLTFLoader()
+      const gltfLoader = new GLTFLoader(loadingManager)
+      const gltfLoader2 = new GLTFLoader(loadingManager)
+      const gltfLoader3 = new GLTFLoader(loadingManager)
+      const gltfLoader4 = new GLTFLoader(loadingManager)
+      const gltfLoader5 = new GLTFLoader(loadingManager)
+      const gltfLoader6 = new GLTFLoader(loadingManager)
+      const gltfLoader7 = new GLTFLoader(loadingManager)
+      const gltfLoader8 = new GLTFLoader(loadingManager)
       
 
 
@@ -1180,6 +1206,8 @@
 
       }
       tick()
+      
+
     </script>
     <div class="author">
 
