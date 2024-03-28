@@ -59,4 +59,23 @@
     .tab-bar_arrows-2 {
       display: none;
     }
+
+    .floating {
+      display: none;
+    }
+    
+    .about 
+      {
+          flex-flow: column;
+      }
+      .right 
+      {
+          flex-flow: row;
+          width: 100%;
+          height: auto;
+      }
+      .h1_paragraph {
+      padding-left: 10px;
+      padding-right: 10px;
+      }
   }

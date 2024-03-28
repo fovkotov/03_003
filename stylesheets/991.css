@@ -42,6 +42,9 @@
       display: flex;
     }
 
+    .floating {
+      top: 55%;
+    }
 
   }
   

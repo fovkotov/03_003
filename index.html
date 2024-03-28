@@ -20,6 +20,23 @@
   </head>
   <body>
     <body>
+      <div class="about">
+        <div class="me_animated">
+          <div id="content8"></div>
+        </div>
+        <div class="right">
+          <img src="/img/me_photo.png" loading="lazy" width="109" height="109" alt="" class="me_photo">
+          <div class="actions">
+            <img src="/img/back.png" id="back_about" loading="lazy" width="50" height="50" alt="" >
+            <img src="/img/claps-cover.png" loading="lazy" width="50" height="50" alt="" >
+          </div>
+        </div>
+        <div class="h1_paragraph">
+            <h1>
+              Andrey Kotov has been fascinated by chivalric novels since childhood. He spent hours in the library, reading stories about valiant warriors, beautiful ladies and treacherous dragons. Images of mighty knights dressed in shining armor were born in his head, and he dreamed of one day creating something that would allow people to touch this magical world. ⚪ ️ ️️Andrey’s dream began to come true when he became interested in computer games. He greedily absorbed everything related to 3D modeling and design, and gradually his hobby turned into a profession. Andrey became a talented 3D artist, and his work was highly appreciated in the gaming industry. ⚪ But Andrey couldn’t forget about his childhood dream. He wanted to create not just beautiful pictures, but an interactive collection of clothes for knights that would allow people not only to see, but also to feel like a medieval warrior. 			And so, after many months of work, Andrey presented his collection to the world. She made a real splash! Knights of all stripes and ages were delighted with the opportunity to try on the armor created with such care and love of detail. 			Andrey Kotov’s collection has become a real breakthrough in the world of interactive design. She not only allowed people to touch the world of chivalry, but also inspired other artists to create their own interactive creations. 			Andrey is not going to stop there. He is already working on new projects that promise to be even more interesting and exciting.               Andrey Kotov has been fascinated by chivalric novels since childhood. He spent hours in the library, reading stories about valiant warriors, beautiful ladies and treacherous dragons. Images of mighty knights dressed in shining armor were born in his head, and he dreamed of one day creating something that would allow people to touch this magical world. ⚪ ️ ️️Andrey’s dream began to come true when he became interested in computer games. He greedily absorbed everything related to 3D modeling and design, and gradually his hobby turned into a profession. Andrey became a talented 3D artist, and his work was highly appreciated in the gaming industry. ⚪ But Andrey couldn’t forget about his childhood dream. He wanted to create not just beautiful pictures, but an interactive collection of clothes for knights that would allow people not only to see, but also to feel like a medieval warrior. 			And so, after many months of work, Andrey presented his collection to the world. She made a real splash! Knights of all stripes and ages were delighted with the opportunity to try on the armor created with such care and love of detail. 			Andrey Kotov’s collection has become a real breakthrough in the world of interactive design. She not only allowed people to touch the world of chivalry, but also inspired other artists to create their own interactive creations. 			Andrey is not going to stop there. He is already working on new projects that promise to be even more interesting and exciting.
+            </h1>
+        </div>
+      </div>
       <div class="bottom">
         <div class="coompany-info">
           <img
@@ -161,6 +178,21 @@
             </div>
           </div>
         </div>
+      <div class="floating">
+        <div class="author-2" id="andrew">
+          <img src="/img/me_photo.png" loading="lazy" width="109" height="109" alt="" class="me_photo">
+          <div class="text">
+            by Andrey Kotov <br>
+            March 2024
+          </div>
+        </div>
+        <div class="author-2">
+          <img src="/img/gra_photo.png" loading="lazy" width="109" height="73" alt="" class="me_photo">
+          <div class="text">
+            Graphic design for the fashion show
+          </div>
+        </div>
+      </div>
       <div class="top">
         <div class="show-info-fake">
           <div class="show-info">
@@ -261,6 +293,9 @@
       import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
       import { Water } from 'three/addons/objects/Water.js';
 			import { Sky } from 'three/addons/objects/Sky.js';
+      // import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+      // import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+      // import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 
 
       //const
@@ -277,6 +312,7 @@
       const gltfLoader5 = new GLTFLoader()
       const gltfLoader6 = new GLTFLoader()
       const gltfLoader7 = new GLTFLoader()
+      const gltfLoader8 = new GLTFLoader()
       
 
 
@@ -302,11 +338,10 @@
       
       
       //
-      //swich
+      //interactions
       //
       $(function () 
       {
-        
         $("#first_knight").click(function () {
           $("#canvas_countanir").hide().css("display", "block");
           console.log("1")
@@ -353,8 +388,8 @@
           console.log("4")
           $("#canvas_countanir").hide().css("display", "none");
           $("#canvas_countanir4").css("z-index", 7);
-          $(".top").css("background-image", "linear-gradient(#ff0000, #ff000000)");
-          $(".bottom").css("background-image", "linear-gradient(#ff000000, #ff0000 88%)");
+          $(".top").css("background-image", "linear-gradient(#ff0089, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #ff0089 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
@@ -404,8 +439,18 @@
           $("#canvas_countanir6").hide().css("display", "none");
           $("#canvas_countanir7").hide().css("display", "block");
         });
+        
+        $("#andrew").click(function () {
+          console.log("andrew")
+          $(".about").css("display", "flex");
+        });
+
+        $("#back_about").click(function () {
+          $(".about").hide();
+        });
 
       });
+    
 
 
 
@@ -426,6 +471,8 @@
     const scene6 = new THREE.Scene();
     //07
     const scene7 = new THREE.Scene();
+    //08
+    const scene8 = new THREE.Scene();
 
 
 
@@ -529,7 +576,7 @@
       const sizes = {
       w: window.innerWidth,
       h: window.innerHeight,
-      w1: window.innerHeight-1,
+      w1: window.innerWidth,
       };
 
 
@@ -567,6 +614,9 @@
             camera7.aspect = sizes.w / sizes.h
             camera7.updateProjectionMatrix()
 
+            camera8.aspect = sizes.w / sizes.h
+            camera8.updateProjectionMatrix()
+
 
             // Update renderer
             renderer.setSize(sizes.w, sizes.h)
@@ -590,6 +640,9 @@
             renderer7.setSize( window.innerWidth, window.innerHeight );
             renderer7.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
+            renderer8.setSize( window.innerWidth, window.innerHeight );
+            renderer8.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+
       })    
       
 
@@ -606,6 +659,7 @@
         "model_05": "models/05.gltf",
         "model_06": "models/06.gltf",
         "model_07": "models/bee.gltf",
+        "model_08": "models/me_animated.gltf",
       };
 
 
@@ -619,6 +673,7 @@
       const camera5 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
       const camera6 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
       const camera7 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
+      const camera8 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
 
 
 
@@ -676,6 +731,15 @@
         renderer7.toneMapping = THREE.ACESFilmicToneMapping;
 				renderer7.toneMappingExposure = 0.5;
 
+        const renderer8 = new THREE.WebGLRenderer(
+          {
+            alpha: true,
+          }
+        );
+        renderer8.setSize(sizes.w, sizes.h);
+        renderer8.toneMapping = THREE.ACESFilmicToneMapping;
+				renderer8.toneMappingExposure = 0.5;
+
       
 
       //create canvas
@@ -686,6 +750,8 @@
       content5.appendChild(renderer5.domElement).id = 'canvas_countanir5';
       content6.appendChild(renderer6.domElement).id = 'canvas_countanir6';
       content7.appendChild(renderer7.domElement).id = 'canvas_countanir7';
+      content8.appendChild(renderer8.domElement).id = 'me_animated';
+
 
 
       var model;
@@ -706,7 +772,7 @@
       traks ["model_02"],
           (gltf2) =>
           {
-              gltf2.scene.scale.set(20, 20, 20)
+              gltf2.scene.scale.set(25, 25, 25)
               scene2.add(gltf2.scene)
               
           }
@@ -732,7 +798,7 @@
         (gltf5) => {
           gltf5.scene.scale.set(10, 10, 10);
           scene5.add(gltf5.scene);
-          gltf5.position.z(20);
+          
         }
       );
 
@@ -747,13 +813,33 @@
       gltfLoader7.load(
         traks["model_07"],
         (gltf7) => {
-          gltf7.scene.scale.set(20, 20, 20);
+          gltf7.scene.scale.set(30, 30, 30);
           scene7.add(gltf7.scene);
         }
       );
+
+      gltfLoader8.load(
+        traks["model_08"],
+        (gltf8) => {
+          gltf8.scene.scale.set(8, 8, 8);
+          scene8.add(gltf8.scene);
+          mixer = new THREE.AnimationMixer(gltf8.scene);
+          const clips = gltf8.animations;
+          const clip = THREE.AnimationClip. findByName(clips, 'model.001Action')
+          if (clip) { // проверка на то, что клип найден
+            const action = mixer.clipAction(clip);
+            action.play();
+          } else {
+            console.warn("Клип анимации 'model.001Action' не найден");
+          }
+        }
+      );
+
+
+
       // Water
 
-      const waterGeometry = new THREE.PlaneGeometry( 1000, 1000 );
+      const waterGeometry = new THREE.PlaneGeometry( 10000, 10000 );
 				
 
       water = new Water(
@@ -825,8 +911,12 @@
 				updateSun();
 
       
-
-      
+      //
+      //postprossessing
+      //
+      // const renderScene = new RenderPass(scene7,camera7);
+      // const composer = new EffectComposer(renderer7);
+      // composer.addPass(renderScene);
 
       //
       //lights
@@ -957,8 +1047,24 @@
       directionalLight7.shadow.camera.bottom = - 7
       directionalLight7.position.set(- 5, 5, 0)
       scene7.add(directionalLight)
-      camera7.position.set( 30, 30, 100 );
+      camera7.position.set( 30, 30, 10 );
 
+      //08
+      const ambientLight8 = new THREE.AmbientLight(0xffffff, 50)
+      scene8.add(ambientLight8)
+      
+      const directionalLight8 = new THREE.DirectionalLight(0xffffff, 50)
+      directionalLight8.castShadow = true
+      directionalLight8.shadow.mapSize.set(1024, 1024)
+      directionalLight8.shadow.camera.far = 15
+      directionalLight8.shadow.camera.left = - 7
+      directionalLight8.shadow.camera.top = 7
+      directionalLight8.shadow.camera.right = 7
+      directionalLight8.shadow.camera.bottom = - 7
+      directionalLight8.position.set(- 5, 5, 0)
+      scene8.add(directionalLight8)
+
+      camera8.position.set( 100, 50, 20 );
       
 
       
@@ -1011,11 +1117,26 @@
       controls7.screenSpacePanning = false;
       controls7.enableZoom = false;
 
+      const controls8 = new OrbitControls(camera8, renderer8.domElement);
+      controls8.enableDamping = true;
+      controls8.dampingFactor = 0.25;
+      controls8.screenSpacePanning = false;
+      controls8.enableZoom = false;
+
+
+      //вертеть по скроллу
+      let scrollY = window.scrollY; 
+      window.addEventListener('scroll', () => 
+        {
+          scrollY = window.scrollY;
+          const rotation = scrollY / window.innerHeight * Math.PI * 2; 
+          gltf2.rotation.y = rotation; 
+        });
+
 
       //clock
       const clock = new THREE.Clock()
       let oldElapsedTime = 0
-
 
       
       //animationn
@@ -1024,7 +1145,8 @@
         const deltaTime = elapsedTime - oldElapsedTime
         oldElapsedTime = elapsedTime
         
-        controls.update()
+        
+          controls.update()
         controls2.update()
 
         renderer.render(scene, camera)
@@ -1043,8 +1165,16 @@
                 
         controls7.update()
         renderer7.render(scene7, camera7)
-              
+
+        renderer8.render(scene8, camera8)
+        // composer.render()
+        // requestAnimationFrame(animate);              
+        
+
+
         window.requestAnimationFrame(tick)
+        if (mixer) 
+          mixer.update(clock.getDelta());
         const time = performance.now() * 0.001;
         water.material.uniforms[ 'time' ].value += 1.0 / 60.0;
 
