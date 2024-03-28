@@ -107,6 +107,22 @@
               alt=""
               class="tab-bar_item"
               />
+            <img  id="sexth_knight"
+            src="./img/05.png"
+            loading="lazy"
+            width="110"
+            height="70"
+            alt=""
+            class="tab-bar_item"
+            />
+            <img  id="seventh_knight"
+            src="./img/05.png"
+            loading="lazy"
+            width="110"
+            height="70"
+            alt=""
+            class="tab-bar_item"
+            />
             </div>
             <div class="tab-bar_arrows-2">
               <img
@@ -217,25 +233,6 @@
           </div>
         </div>
       </div>
-      
-        <!-- <div class="test">
-            <div class="countanir">
-                <div id="first_knight" class="item">
-                <p>aliann</p></div>
-                <div id="second_knight" class="item">
-                    <p>Bee</p></div>
-                <div id="third_knight" class="item">
-                  <p>third</p></div>
-                <div id="fourth_knight" class="item">
-                  <p>fourth</p></div>
-                <div id="fivth" class="item">
-                  <p>fivth</p></div>
-                <div id="sexth_knight" class="item">
-                  <p>sixth</p></div>
-                <div id="seventh_knight" class="item">
-                  <p>seventh</p></div>
-            </div>
-        </div> -->
 
     <div class="canvas_countanir">
       <div id="content"></div>
@@ -313,6 +310,9 @@
         $("#first_knight").click(function () {
           $("#canvas_countanir").hide().css("display", "block");
           console.log("1")
+          $("#canvas_countanir").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#09e314, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #09e314 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
@@ -323,18 +323,24 @@
 
         $("#second_knight").click(function () {
           console.log("2")
+          $("#canvas_countanir2").hide().css("display", "block");
+          $("#canvas_countanir2").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#e309e3, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #e309e3 88%)");
           $("#canvas_countanir").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
           $("#canvas_countanir5").hide().css("display", "none");
           $("#canvas_countanir6").hide().css("display", "none");
           $("#canvas_countanir7").hide().css("display", "none");
-          $("#canvas_countanir2").hide().css("display", "block");
         });
 
         $("#third_knight").click(function () {
           console.log("3")
           $("#canvas_countanir").hide().css("display", "none");
+          $("#canvas_countanir3").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#ff8a00, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #ff8a00 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
           $("#canvas_countanir5").hide().css("display", "none");
@@ -346,6 +352,9 @@
         $("#fourth_knight").click(function () {
           console.log("4")
           $("#canvas_countanir").hide().css("display", "none");
+          $("#canvas_countanir4").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#ff0000, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #ff0000 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
@@ -358,6 +367,9 @@
         $("#fivth").click(function () {
           console.log("5")
           $("#canvas_countanir").hide().css("display", "none");
+          $("#canvas_countanir5").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#7e09e3, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #7e09e3 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
@@ -369,6 +381,9 @@
         $("#sexth_knight").click(function () {
           console.log("6")
           $("#canvas_countanir").hide().css("display", "none");
+          $("#canvas_countanir6").css("z-index", 7);
+          $(".top").css("background-image", "linear-gradient(#18bdff, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #18bdff 88%)");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
           $("#canvas_countanir4").hide().css("display", "none");
@@ -379,6 +394,8 @@
 
         $("#seventh_knight").click(function () {
           console.log("7")
+          $(".top").css("background-image", "linear-gradient(#ff0000, #ff000000)");
+          $(".bottom").css("background-image", "linear-gradient(#ff000000, #ff0000 88%)");
           $("#canvas_countanir").hide().css("display", "none");
           $("#canvas_countanir2").hide().css("display", "none");
           $("#canvas_countanir3").hide().css("display", "none");
@@ -426,7 +443,7 @@
       ])
 
       environmentMap.encoding = THREE.sRGBEncoding
-      scene.background = environmentMap
+      // scene.background = environmentMap
       scene.environment = environmentMap
 
       //02
@@ -439,21 +456,21 @@
         '/textures/environmentMaps/2/nz.jpg'
       ])
       environmentMap2.encoding = THREE.sRGBEncoding
-      scene2.background = environmentMap2
+      // scene2.background = environmentMap2
       scene2.environment = environmentMap2
 
       //03
-      const environmentMap3 = cubeTextureLoader.load([
-        '/textures/environmentMaps/2/px.jpg',
-        '/textures/environmentMaps/2/nx.jpg',
-        '/textures/environmentMaps/2/py.jpg',
-        '/textures/environmentMaps/2/ny.jpg',
-        '/textures/environmentMaps/2/pz.jpg',
-        '/textures/environmentMaps/2/nz.jpg'
-      ])
-      environmentMap3.encoding = THREE.sRGBEncoding
-      scene3.background = environmentMap3
-      scene3.environment = environmentMap3
+      // const environmentMap3 = cubeTextureLoader.load([
+      //   '/textures/environmentMaps/1/px.jpg',
+      //   '/textures/environmentMaps/1/nx.jpg',
+      //   '/textures/environmentMaps/1/py.jpg',
+      //   '/textures/environmentMaps/1/ny.jpg',
+      //   '/textures/environmentMaps/1/pz.jpg',
+      //   '/textures/environmentMaps/1/nz.jpg'
+      // ])
+      // environmentMap3.encoding = THREE.sRGBEncoding
+      // // scene3.background = environmentMap3
+      // scene3.environment = environmentMap3
 
       //04
       const environmentMap4 = cubeTextureLoader.load([
@@ -465,7 +482,7 @@
       '/textures/environmentMaps/2/nz.jpg'
       ])
       environmentMap4.encoding = THREE.sRGBEncoding
-      scene4.background = environmentMap4
+      // scene4.background = environmentMap4
       scene4.environment = environmentMap4
 
       //05
@@ -478,7 +495,7 @@
       '/textures/environmentMaps/2/nz.jpg'
       ])
       environmentMap5.encoding = THREE.sRGBEncoding
-      scene5.background = environmentMap5
+      // scene5.background = environmentMap5
       scene5.environment = environmentMap5
 
       //06
@@ -491,9 +508,9 @@
         '/textures/environmentMaps/2/nz.jpg'
       ])
       environmentMap6.encoding = THREE.sRGBEncoding
-      scene6.background = environmentMap6
+      // scene6.background = environmentMap6
       scene6.environment = environmentMap6
-      //07
+      // 07
       //   const environmentMap7 = cubeTextureLoader.load([
       // '/textures/environmentMaps/2/px.jpg',
       // '/textures/environmentMaps/2/nx.jpg',
@@ -511,7 +528,8 @@
       // sizes 
       const sizes = {
       w: window.innerWidth,
-      h: window.innerHeight
+      h: window.innerHeight,
+      w1: window.innerHeight-1,
       };
 
 
@@ -528,22 +546,22 @@
             camera.aspect = sizes.w / sizes.h
             camera.updateProjectionMatrix()      
 
-            camera2.aspect = sizes.w / sizes.h
+            camera2.aspect = sizes.w1 / sizes.h
             camera2.updateProjectionMatrix()
 
-            camera2.aspect = sizes.w / sizes.h
+            camera2.aspect = sizes.w1 / sizes.h
             camera2.updateProjectionMatrix()
 
-            camera3.aspect = sizes.w / sizes.h
+            camera3.aspect = sizes.w1 / sizes.h
             camera3.updateProjectionMatrix()
 
-            camera4.aspect = sizes.w / sizes.h
+            camera4.aspect = sizes.w1 / sizes.h
             camera4.updateProjectionMatrix()
 
-            camera5.aspect = sizes.w / sizes.h
+            camera5.aspect = sizes.w1 / sizes.h
             camera5.updateProjectionMatrix()
 
-            camera6.aspect = sizes.w / sizes.h
+            camera6.aspect = sizes.w1 / sizes.h
             camera6.updateProjectionMatrix()
 
             camera7.aspect = sizes.w / sizes.h
@@ -554,19 +572,19 @@
             renderer.setSize(sizes.w, sizes.h)
             renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-            renderer2.setSize(sizes.w, sizes.h)
+            renderer2.setSize(sizes.w1, sizes.h)
             renderer2.setPixelRatio(Math.min(window.devicePixelRatio, 2))
             
-            renderer3.setSize(sizes.w, sizes.h)
+            renderer3.setSize(sizes.w1, sizes.h)
             renderer3.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-            renderer4.setSize(sizes.w, sizes.h)
+            renderer4.setSize(sizes.w1, sizes.h)
             renderer4.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-            renderer5.setSize(sizes.w, sizes.h)
+            renderer5.setSize(sizes.w1, sizes.h)
             renderer5.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
-            renderer6.setSize(sizes.w, sizes.h)
+            renderer6.setSize(sizes.w1, sizes.h)
             renderer6.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 
             renderer7.setSize( window.innerWidth, window.innerHeight );
@@ -581,13 +599,13 @@
       //
       //Переменные, отвечающие за пути к моделькам
       var traks = {
-        "model_01": "models/bee.gltf",
-        "model_02": "models/alian.gltf",
+        "model_01": "models/01.gltf",
+        "model_02": "models/02.gltf",
         "model_03": "models/03.gltf",
         "model_04": "models/04.gltf",
         "model_05": "models/05.gltf",
         "model_06": "models/06.gltf",
-        "model_07": "models/07.gltf",
+        "model_07": "models/bee.gltf",
       };
 
 
@@ -595,11 +613,11 @@
       //camera
       //
       const camera = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
-      const camera2 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
-      const camera3 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
-      const camera4 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
-      const camera5 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
-      const camera6 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
+      const camera2 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
+      const camera3 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
+      const camera4 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
+      const camera5 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
+      const camera6 = new THREE.PerspectiveCamera(60, sizes.w1 / sizes.h, 0.1, 1000);
       const camera7 = new THREE.PerspectiveCamera(60, sizes.w / sizes.h, 0.1, 1000);
 
 
@@ -620,34 +638,34 @@
               alpha: true,
           }
           );
-      renderer2.setSize( sizes.w , sizes.h );
+      renderer2.setSize( sizes.w1 , sizes.h );
       const renderer3 = new THREE.WebGLRenderer(
           {
             alpha: true,
           }
         );
-        renderer3.setSize(sizes.w, sizes.h);
+        renderer3.setSize(sizes.w1, sizes.h);
 
         const renderer4 = new THREE.WebGLRenderer(
           {
             alpha: true,
           }
         );
-        renderer4.setSize(sizes.w, sizes.h);
+        renderer4.setSize(sizes.w1, sizes.h);
 
         const renderer5 = new THREE.WebGLRenderer(
           {
             alpha: true,
           }
         );
-        renderer5.setSize(sizes.w, sizes.h);
+        renderer5.setSize(sizes.w1, sizes.h);
 
         const renderer6 = new THREE.WebGLRenderer(
           {
             alpha: true,
           }
         );
-        renderer6.setSize(sizes.w, sizes.h);
+        renderer6.setSize(sizes.w1, sizes.h);
 
         const renderer7 = new THREE.WebGLRenderer(
           {
@@ -688,7 +706,7 @@
       traks ["model_02"],
           (gltf2) =>
           {
-              gltf2.scene.scale.set(10, 10, 10)
+              gltf2.scene.scale.set(20, 20, 20)
               scene2.add(gltf2.scene)
               
           }
@@ -696,7 +714,7 @@
       gltfLoader3.load(
       traks["model_03"],
       (gltf3) => {
-        gltf3.scene.scale.set(10, 10, 10);
+        gltf3.scene.scale.set(20, 20, 20);
         scene3.add(gltf3.scene);
       }
       );
@@ -704,7 +722,7 @@
       gltfLoader4.load(
         traks["model_04"],
         (gltf4) => {
-          gltf4.scene.scale.set(10, 10, 10);
+          gltf4.scene.scale.set(15, 15, 15);
           scene4.add(gltf4.scene);
         }
       );
@@ -714,6 +732,7 @@
         (gltf5) => {
           gltf5.scene.scale.set(10, 10, 10);
           scene5.add(gltf5.scene);
+          gltf5.position.z(20);
         }
       );
 
@@ -845,10 +864,10 @@
       camera2.position.set(20, 0, 10);
       
       //03
-      const ambientLight3 = new THREE.AmbientLight(0xffffff, 1.3)
+      const ambientLight3 = new THREE.AmbientLight(0xffffff, 40)
       scene3.add(ambientLight3)
 
-      const directionalLight3 = new THREE.DirectionalLight(0xffffff, 1.3)
+      const directionalLight3 = new THREE.DirectionalLight(0xffffff, 20)
       directionalLight3.castShadow = true
       directionalLight3.shadow.mapSize.set(1024, 1024)
       directionalLight3.shadow.camera.far = 15
@@ -857,7 +876,23 @@
       directionalLight3.shadow.camera.right = 7
       directionalLight3.shadow.camera.bottom = - 7
       directionalLight3.position.set(- 5, 5, 0)
-      scene3.add(directionalLight)
+      scene3.add(directionalLight3)
+
+      const pointLight = new THREE.PointLight(0xffffff, 80);
+      pointLight.position.set(5, 0, 5);
+      scene3.add(pointLight);
+
+      const hemisphereLight = new THREE.HemisphereLight(0xaaaaff, 0xffffff, 80);
+      scene3.add(hemisphereLight);
+
+      const spotLight = new THREE.SpotLight(0xffffff, 80);
+      spotLight.position.set(5, 0, -10);
+      spotLight.castShadow = true;
+      spotLight.shadow.mapSize.set(512, 512);
+      // spotLight.cone = new THREE.ConeLightHelper(spotLight);  
+      // spotLight.target = camera3.position;  
+      // scene3.add(spotLight);
+
       camera3.position.set(20, 0, 10);
       
       //04
@@ -1017,5 +1052,8 @@
       }
       tick()
     </script>
+    <div class="author">
+
+    </div>
   </body>
 </html>

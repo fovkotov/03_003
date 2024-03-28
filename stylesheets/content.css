@@ -37,47 +37,49 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
-    display: none;
+    
+    /* display: none; */
 }
 
 #canvas_countanir2{
     z-index: 2;
     position: absolute;
     top: 0px;
-    left: 0px;
-    display: none;
+    left: -100px;
+    /* display: none; */
+    
 }
 
 #canvas_countanir3 {
     z-index: 2;
     position: absolute;
     top: 0px;
-    display: none;
-    left: 0px;
+    /* display: none; */
+    left: -100px;
   }
   
   #canvas_countanir4 {
     z-index: 2;
     position: absolute;
     top: 0px;
-    display: none;
-    left: 0px;
+    /* display: none; */
+    left: -100px;
   }
   
   #canvas_countanir5 {
     z-index: 2;
     position: absolute;
     top: 0px;
-    display: none;
-    left: 0px;
+    /* display: none; */
+    left: -100px;
   }
   
   #canvas_countanir6 {
     z-index: 2;
     position: absolute;
     top: 0px;
-    display: none;
-    left: 0px;
+    /* display: none; */
+    left: -100px;
   }
   
   #canvas_countanir7 {
@@ -112,7 +114,7 @@ p{
     width: calc(100% - 20px);
     max-width: 1920px;
     grid-column-gap: 10px;
-    background-image: linear-gradient(rgba(255, 0, 0, 0), red 88%);
+    background-image: linear-gradient(#ff000000, #ff0000 88%);
     justify-content: flex-start;
     align-items: flex-start;
     padding: 80px 10px 10px;
@@ -120,7 +122,7 @@ p{
     display: flex;
     position: fixed;
     bottom: 0;
-    z-index: 5;
+    z-index: 8;
   }
   
   .coompany-info {
@@ -286,7 +288,7 @@ p{
     width: calc(100% - 20px);
     max-width: 1920px;
     grid-column-gap: 10px;
-    background-image: linear-gradient(red, rgba(255, 0, 0, 0));
+    background-image: linear-gradient(#ff0000, #ff000000);
     justify-content: flex-start;
     align-items: flex-start;
     padding: 10px;
