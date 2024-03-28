@@ -1,6 +1,6 @@
 @font-face {
     font-family: "FTAktualTrial-Semibold";
-    src: url("./fonts/FTAktualTrial-Semibold.otf");
-    
+    src: url("../fonts/FTAktualTrial-Semibold.otf");
+    font-style: normal;
     font-weight: 700;
 }   
