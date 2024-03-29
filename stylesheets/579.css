@@ -12,6 +12,7 @@
   
     .tab-bar_tabs {
       overflow: auto;
+      justify-content: flex-start;
     }
   
     .mybutton {
@@ -34,7 +35,7 @@
       width: 70px;
     }
 
-    .text-2_goods{
+    p.text-2_goods{
       font-size: 10px;
       line-height: 10px;
     }
@@ -100,6 +101,26 @@
       }
 
       .actions{
+        flex-direction: column;
+      }
+
+      .about_refs{
+        flex-direction: column;
+      }
+
+      .right-side{
+        flex-direction: column;
+      }
+
+      .first_knight_product-04_page{
+        flex-direction: column;
+      }
+
+      .first_knight_product-02_page{
+        flex-direction: column;
+      }
+
+      .first_knight_product-03_page{
         flex-direction: column;
       }
   }
