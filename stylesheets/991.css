@@ -45,6 +45,10 @@
     .floating {
       top: 55%;
     }
+    
+    .tab-bar{
+      width: 100%;
+    }    
 
   }
   

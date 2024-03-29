@@ -67,4 +67,22 @@
       font-size: 8.7vw;
       line-height: 8vw;
     }
+    .layer {
+      flex-flow: column;
+    }
+
+    .images {
+      grid-column-gap: 10px;
+      flex-direction: row;
+      height: 100%;
+      overflow: auto;
+    }
+  
+    .rectangle-62 {
+      height: 100%;
+    }
+  
+    .actions_product {
+      flex-direction: row;
+    }
   }

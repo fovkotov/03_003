@@ -1,0 +1,7 @@
+@media screen and (max-width: 1920px) {
+
+    .tab-bar_tabs{
+        width: 100%;
+        overflow: auto;
+    }
+}

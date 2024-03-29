@@ -78,4 +78,24 @@
       padding-left: 10px;
       padding-right: 10px;
       }
+
+      .images {
+        grid-column-gap: 10px;
+        height: 100%;
+        flex-direction: row;
+      }
+    
+      .first_knight_product-01_page{
+        flex-direction: column;
+      }
+      
+      .actions_product {
+        flex-direction: row;
+        gap: 4px;
+      }
+
+      .product_images{
+        height: 100%;
+
+      }
   }
