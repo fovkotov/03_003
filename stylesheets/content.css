@@ -206,7 +206,7 @@ p{
     display: flex;
   }
   
-  .text {
+  p.text {
     color: #fff;
     letter-spacing: -.1px;
     margin-top: 0;
@@ -218,7 +218,7 @@ p{
     font-family: 'FTAktualTrial-Semibold';
   }
 
-  .text-label {
+  p.text-label {
     color: #000000;
     letter-spacing: -.1px;
     margin-top: 0;
@@ -382,7 +382,7 @@ p{
     display: flex;
   }
   
-  .text-2 {
+  p.text-2 {
     color: #fff;
     letter-spacing: -.42px;
     margin-top: 0;
@@ -524,7 +524,7 @@ p{
     display: none;
   }
   
-  .text-2_goods {
+  p.text-2_goods {
     color: #fff;
     letter-spacing: -.42px;
     margin-top: 0;
@@ -926,7 +926,7 @@ h1 {
   display: flex;
 }
 
-.text-6 {
+p.text-6 {
   color: #fff;
   letter-spacing: -.42px;
   margin-top: 0;
@@ -937,7 +937,7 @@ h1 {
   text-decoration: none;
 }
 
-.text-7 {
+p.text-7 {
   color: #fff;
   letter-spacing: -.1px;
   margin-top: 0;
@@ -962,7 +962,7 @@ h1 {
   cursor: pointer;
 }
 
-.text-8 {
+p.text-8 {
   color: #000;
   letter-spacing: -.1px;
   margin-top: 0;
@@ -1007,7 +1007,7 @@ h1 {
   border-radius: 13px;
 }
 
-.text-9 {
+p.text-9 {
   color: #000;
   letter-spacing: -.58px;
   margin-top: 0;
